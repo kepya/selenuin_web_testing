@@ -1,0 +1,5 @@
+Download chrome driver: 
+https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json
+
+Download edge driver:
+https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/#downloads
