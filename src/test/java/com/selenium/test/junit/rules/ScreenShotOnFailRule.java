@@ -22,7 +22,7 @@ public class ScreenShotOnFailRule implements TestRule {
                 try {
                     base.evaluate();
                 } catch (Throwable t) {
-                    WebDriverFactory.takeScreenShot();
+//                    WebDriverFactory.takeScreenShot();
                     throw t;
                 }
             }

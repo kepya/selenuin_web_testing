@@ -3,3 +3,6 @@ https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-d
 
 Download edge driver:
 https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/#downloads
+
+Learn how to use selenium:
+https://testsigma.com/blog/selenium-ui-testing/
