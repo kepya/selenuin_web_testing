@@ -5,13 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c33a66eb-5114-40f1-93e6-ef810c70e4b9" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/selenium/test/projets/cimencam/LoginTestFeature.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/selenium/test/webtestsbase/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/screenshots/text.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/selenium/test/webtestsbase/WebDriverFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/selenium/test/webtestsbase/WebDriverFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/link_driver.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/link_driver.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/selenium/test/junit/rules/ScreenShotOnFailRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/selenium/test/junit/rules/ScreenShotOnFailRule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/selenium/test/projets/cimencam/AdministrationTestFeatures.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/selenium/test/projets/cimencam/LoginTestFeature.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/selenium/test/projets/cimencam/LoginTestFeature.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/selenium/test/webtestsbase/WebDriverFactory$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/selenium/test/webtestsbase/WebDriverFactory$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/selenium/test/webtestsbase/WebDriverFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/selenium/test/webtestsbase/WebDriverFactory.class" afterDir="false" />
     </list>
@@ -124,6 +122,20 @@
       <Host>localhost</Host>
       <Port>5050</Port>
     </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.selenium.test.webtestsbase.Main" />
+      <module name="selenium-app" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.selenium.test.webtestsbase.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <method v="2">
@@ -169,6 +181,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="LoginTestFeature.adminLoginSuccessfully" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="selenium-app" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.selenium.test.projets.cimencam.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.selenium.test.projets.cimencam" />
+      <option name="MAIN_CLASS_NAME" value="com.selenium.test.projets.cimencam.LoginTestFeature" />
+      <option name="METHOD_NAME" value="adminLoginSuccessfully" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="LoginTestFeature.login" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="selenium-app" />
       <extension name="coverage">
@@ -189,54 +221,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SimpleTest.testFillGoogleForm" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="selenium-app" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.selenium.test.junit.tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.selenium.test.junit.tests" />
-      <option name="MAIN_CLASS_NAME" value="com.selenium.test.junit.tests.SimpleTest" />
-      <option name="METHOD_NAME" value="testFillGoogleForm" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="TEST_OBJECT" value="class" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="TEST_SEARCH_SCOPE">
         <value defaultName="moduleWithDependencies" />
       </option>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SimpleTest.testFillGoogleForm" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="selenium-app" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.selenium.test.testng.tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.selenium.test.testng.tests" />
-      <option name="MAIN_CLASS_NAME" value="com.selenium.test.testng.tests.SimpleTest" />
-      <option name="METHOD_NAME" value="testFillGoogleForm" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <properties />
-      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -265,10 +255,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.LoginTestFeature" />
+        <item itemvalue="JUnit.LoginTestFeature.adminLoginSuccessfully" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.LoginTestFeature.login" />
         <item itemvalue="JUnit.AdministrationTestFeatures.login" />
-        <item itemvalue="TestNG.SimpleTest.testFillGoogleForm" />
-        <item itemvalue="JUnit.SimpleTest.testFillGoogleForm" />
       </list>
     </recent_temporary>
   </component>

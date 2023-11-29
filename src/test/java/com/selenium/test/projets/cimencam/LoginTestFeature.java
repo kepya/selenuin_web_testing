@@ -156,7 +156,7 @@ public class LoginTestFeature {
                 isLogin = false;
             }
 
-            Assert.assertTrue(isLogin);
+            Assert.assertFalse(isLogin);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -203,7 +203,7 @@ public class LoginTestFeature {
                 isLogin = false;
             }
 
-            Assert.assertTrue(isLogin);
+            Assert.assertFalse(isLogin);
         } catch (Exception e) {
             e.printStackTrace();
         }

@@ -12,6 +12,9 @@ import org.openqa.selenium.safari.SafariDriver;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
+import java.net.URISyntaxException;
+import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.Base64;
@@ -95,13 +98,19 @@ public class WebDriverFactory {
      */
     public static void takeScreenShot() {
        try {
+           URL location = WebDriverFactory.class.getProtectionDomain().getCodeSource().getLocation();
+          String absolutePath = Paths.get(location.toURI()).toAbsolutePath().toString();
+           absolutePath = absolutePath.replace("classes", "screenshots");
+           System.out.println("Absolute path of the class file: " + absolutePath);
            String screenshotBase64 = ((TakesScreenshot)driver).getScreenshotAs(OutputType.BASE64);
            // Convert Base64 String to File
            byte[] decodedBytes = Base64.getDecoder().decode(screenshotBase64);
-           Files.write(Paths.get("screenshots/screen_fail_" + new Date().getTime()), decodedBytes);
+           Files.write(Paths.get(absolutePath + "_screen_" + new Date().getTime() + ".jpg").toAbsolutePath(), decodedBytes);
            System.out.println("ScreenShot method called");
        } catch (IOException e) {
-           System.out.println("error");
+           System.out.println("error: " + e.getMessage());
+       } catch (URISyntaxException e) {
+           e.printStackTrace();
        }
     }
 
