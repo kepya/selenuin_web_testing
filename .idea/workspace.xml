@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c33a66eb-5114-40f1-93e6-ef810c70e4b9" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/selenium/test/webtestsbase/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/screenshots/text.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/selenium/test/webtestsbase/WebDriverFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/selenium/test/webtestsbase/WebDriverFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/selenium/test/projets/cimencam/LoginTestFeature.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/selenium/test/projets/cimencam/LoginTestFeature.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/selenium/test/webtestsbase/WebDriverFactory$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/selenium/test/webtestsbase/WebDriverFactory$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/selenium/test/webtestsbase/WebDriverFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/selenium/test/webtestsbase/WebDriverFactory.class" afterDir="false" />
-    </list>
+    <list default="true" id="c33a66eb-5114-40f1-93e6-ef810c70e4b9" name="Default" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
