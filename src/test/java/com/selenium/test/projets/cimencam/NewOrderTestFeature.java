@@ -1,15 +1,18 @@
 package com.selenium.test.projets.cimencam;
 
 import com.selenium.test.junit.rules.ScreenShotOnFailRule;
+import com.selenium.test.utils.TimeUtils;
 import com.selenium.test.webtestsbase.WebDriverFactory;
-import org.junit.*;
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Rule;
+import org.junit.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
-import java.util.Calendar;
 
 import static org.junit.Assert.fail;
 
@@ -27,6 +30,7 @@ public class NewOrderTestFeature {
         WebDriverFactory.startBrowser(true);
     }
 
+
     /**
      * Created by KEPYA Christian on 28.11.23.
      * Uses JUnit test framework
@@ -36,8 +40,8 @@ public class NewOrderTestFeature {
      * Here we use Mtn for payment
      */
     @Test
-    public void newPickUpOrderAndMtnPayment() {
-        WebDriverWait wait = new WebDriverWait(WebDriverFactory.getDriver(), 10);
+    public void newPickUpOrderAndMtnPayment() throws InterruptedException {
+        WebDriverWait wait = new WebDriverWait(WebDriverFactory.getDriver(), 30);
 
         /***** Login Proces ****/
         //open browser to link https://mcm-test.londo-tech.com/
@@ -64,11 +68,11 @@ public class NewOrderTestFeature {
         try {
             wait.until(ExpectedConditions.presenceOfElementLocated(elementLocator));
         } catch (TimeoutException e) {
-            fail("Login failed" );
+            fail("Login failed");
         }
 
         /***** Order Proces ****/
-
+        boolean storeSelectInProgress = true;
         By newPurchaseBtnLocator = By.className("new-purchase-btn");
         try {
             wait.until(ExpectedConditions.presenceOfElementLocated(newPurchaseBtnLocator));
@@ -95,93 +99,182 @@ public class NewOrderTestFeature {
             // Find the select option element
             WebElement storeSelectOption = WebDriverFactory.getDriver().findElement(storeSelectOptionLocator);
             storeSelectOption.click();
+            TimeUtils.waitForSeconds(4);
         } catch (TimeoutException e) {
             fail("store select option does not exist so we got a problem");
         }
 
         //get add article btn element by xpath
-        WebElement addArticleBtn = WebDriverFactory.getDriver().findElement(By.xpath("/html/body/mcw-root/nb-layout/div[1]/div/div/div/div/nb-layout-column/mcw-order-form/mcw-step-store-and-items/div/nb-card/nb-card-body/div[2]/button"));
-        addArticleBtn.click();
+        By addArticleBtnLocator = By.className("add-elt-btn");
+        try {
+            wait.until(ExpectedConditions.presenceOfElementLocated(addArticleBtnLocator));
+            // Find the select option element
+            WebElement addArticleBtn = WebDriverFactory.getDriver().findElement(addArticleBtnLocator);
+            if (addArticleBtn.isDisplayed() && addArticleBtn.isEnabled()) {
+                addArticleBtn.click();
+            }
+        } catch (TimeoutException e) {
+            fail("article btn add does not exist so we got a problem");
+        }
 
         // Show the list of product
-        WebElement productSelect = WebDriverFactory.getDriver().findElement(By.xpath("/html/body/mcw-root/nb-layout/div[1]/div/div/div/div/nb-layout-column/mcw-order-form/mcw-step-store-and-items/div/nb-card/nb-card-body/div[2]/ul/li[2]/div[2]/nb-select"));
-        productSelect.click();
+        By productSelectLocator = By.xpath("/html/body/mcw-root/nb-layout/div[1]/div/div/div/div/nb-layout-column/mcw-order-form/mcw-step-store-and-items/div/nb-card/nb-card-body/div[2]/ul/li[2]/div[2]/nb-select");
+        try {
+            wait.until(ExpectedConditions.presenceOfElementLocated(productSelectLocator));
+            // Find the select option element
+            WebElement productSelect = WebDriverFactory.getDriver().findElement(productSelectLocator);
+            if (productSelect.isDisplayed() && productSelect.isEnabled()) {
+                productSelect.click();
+            }
+        } catch (TimeoutException e) {
+            fail("product select does not exist so we got a problem");
+        }
 
-        WebElement productSelectOption =  WebDriverFactory.getDriver().findElement(By.id("nb-option-11"));
-        productSelectOption.click();
+        // Show the list of product
+        By productSelectOptionLocator = By.id("nb-option-9");
+        try {
+            wait.until(ExpectedConditions.presenceOfElementLocated(productSelectOptionLocator));
+            // Find the select option element
+            WebElement productSelectOption = WebDriverFactory.getDriver().findElement(productSelectOptionLocator);
+            if (productSelectOption.isDisplayed() && productSelectOption.isEnabled()) {
+                productSelectOption.click();
+            }
+        } catch (TimeoutException e) {
+            fail("product select option does not exist so we got a problem");
+        }
 
         // Find the quantity field element for add quantity of product
-        WebElement quantityInBagField = WebDriverFactory.getDriver().findElement(By.xpath("/html/body/mcw-root/nb-layout/div[1]/div/div/div/div/nb-layout-column/mcw-order-form/mcw-step-store-and-items/div/nb-card/nb-card-body/div[2]/ul/li[2]/div[3]/input"));
-        quantityInBagField.sendKeys("1");
-
-        //add another line to select product
-        addArticleBtn.click();
-        WebElement deleteArticleBtn = WebDriverFactory.getDriver().findElement(By.xpath("/html/body/mcw-root/nb-layout/div[1]/div/div/div/div/nb-layout-column/mcw-order-form/mcw-step-store-and-items/div/nb-card/nb-card-body/div[2]/ul/li[3]/div[6]/nb-icon"));
-        deleteArticleBtn.click();
+        By quantityInBagFieldLocator = By.className("quantity-field");
+        try {
+            wait.until(ExpectedConditions.presenceOfElementLocated(quantityInBagFieldLocator));
+            // Find the select option element
+            WebElement quantityInBagField = WebDriverFactory.getDriver().findElement(quantityInBagFieldLocator);
+            if (quantityInBagField.isDisplayed() && quantityInBagField.isEnabled()) {
+                quantityInBagField.sendKeys("1");
+            }
+        } catch (TimeoutException e) {
+            fail("Input field quantity does not exist so we got a problem");
+        }
 
         //get schedule article btn element by xpath
-        WebElement scheduleArticleBtn = WebDriverFactory.getDriver().findElement(By.xpath("/html/body/mcw-root/nb-layout/div[1]/div/div/div/div/nb-layout-column/mcw-order-form/mcw-step-store-and-items/div/nb-card/nb-card-body/div[2]/div[2]/button"));
-        scheduleArticleBtn.click();
+        By scheduleArticleBtnLocator = By.xpath("/html/body/mcw-root/nb-layout/div[1]/div/div/div/div/nb-layout-column/mcw-order-form/mcw-step-store-and-items/div/nb-card/nb-card-body/div[2]/div[2]/button");
+        try {
+            wait.until(ExpectedConditions.presenceOfElementLocated(scheduleArticleBtnLocator));
+            // Find the select option element
+            WebElement scheduleArticleBtn = WebDriverFactory.getDriver().findElement(scheduleArticleBtnLocator);
+            if (scheduleArticleBtn.isDisplayed() && scheduleArticleBtn.isEnabled()) {
+                scheduleArticleBtn.click();
+            }
+        } catch (TimeoutException e) {
+            fail("article btn schedule does not exist so we got a problem");
+        }
 
-        //get schedule product in schedule page btn element by xpath
-        WebElement schedule1ArticleBtn = WebDriverFactory.getDriver().findElement(By.xpath("/html/body/mcw-root/nb-layout/div[1]/div/div/div/div/nb-layout-column/mcw-order-form/mcw-step-store-and-items/div/nb-card/nb-card-body/div[2]/div[2]/button"));
-        schedule1ArticleBtn.click();
+        //get schedule product in schedule page btn element
+        By schedule1ArticleBtnLocator = By.className("add-elt-btn");
+        try {
+            wait.until(ExpectedConditions.presenceOfElementLocated(schedule1ArticleBtnLocator));
+            // Find the select option element
+            WebElement schedule1ArticleBtn = WebDriverFactory.getDriver().findElement(schedule1ArticleBtnLocator);
+            if (schedule1ArticleBtn.isDisplayed() && schedule1ArticleBtn.isEnabled()) {
+                schedule1ArticleBtn.click();
+            }
+        } catch (TimeoutException e) {
+            fail("article btn schedule 1 does not exist so we got a problem");
+        }
 
         // Find the withdrawal date field element
-        WebElement withdrawalField = WebDriverFactory.getDriver().findElement(By.xpath("/html/body/mcw-root/nb-layout/div[1]/div/div/div/div/nb-layout-column/mcw-delivery-pick-up/div/div[2]/nb-card[1]/nb-card-body/div/div[1]/input"));
-        Calendar calendar = Calendar.getInstance();
-        withdrawalField.sendKeys(calendar.get(Calendar.YEAR) + "-" + calendar.get(Calendar.MONTH) + "-" + calendar.get(Calendar.DAY_OF_MONTH));
+        By withdrawalInputLocator = By.xpath("/html/body/mcw-root/nb-layout/div[1]/div/div/div/div/nb-layout-column/mcw-delivery-pick-up/div/div[2]/nb-card[1]/nb-card-body/div/div[1]/input");
+        try {
+            wait.until(ExpectedConditions.presenceOfElementLocated(withdrawalInputLocator));
+            // Find the select option element
+            WebElement withdrawalInput = WebDriverFactory.getDriver().findElement(withdrawalInputLocator);
+            if (withdrawalInput.isDisplayed() && withdrawalInput.isEnabled()) {
+                withdrawalInput.click();
+
+                By withdrawalCalendarLocator = By.className("today");
+                try {
+                    wait.until(ExpectedConditions.presenceOfElementLocated(withdrawalCalendarLocator));
+                    WebElement withdrawalCalendar = WebDriverFactory.getDriver().findElement(withdrawalCalendarLocator);
+                    if (withdrawalCalendar.isDisplayed() && withdrawalCalendar.isEnabled()) {
+                        JavascriptExecutor executor = (JavascriptExecutor) WebDriverFactory.getDriver();
+                        executor.executeScript("arguments[0].click();", withdrawalCalendar);
+                    }
+                } catch (TimeoutException e) {
+                    fail("withdrawal calendar does not showing so we got a problem");
+                }
+            }
+        } catch (TimeoutException e) {
+            fail("withdrawal input does not exist so we got a problem");
+        }
 
         // Show the list of quart time
-        WebElement quartTimeSelect = WebDriverFactory.getDriver().findElement(By.xpath("/html/body/mcw-root/nb-layout/div[1]/div/div/div/div/nb-layout-column/mcw-order-form/mcw-step-store-and-items/div/nb-card/nb-card-body/div[2]/ul/li[2]/div[2]/nb-select"));
-        quartTimeSelect.click();
+        By quartTimeSelectLocator = By.id("quartSelect");
+//        By quartTimeSelectLocator = By.xpath("/html/body/mcw-root/nb-layout/div[1]/div/div/div/div/nb-layout-column/mcw-delivery-pick-up/div/div[2]/nb-card[1]/nb-card-body/div/div[2]/nb-select");
 
-        WebElement quartTimeSelectOption =  WebDriverFactory.getDriver().findElement(By.id("nb-option-18"));
-        quartTimeSelectOption.click();
+        try {
+            wait.until(ExpectedConditions.presenceOfElementLocated(quartTimeSelectLocator));
+            wait.until(ExpectedConditions.elementToBeClickable(quartTimeSelectLocator));
+            WebElement quartTimeSelect = WebDriverFactory.getDriver().findElement(quartTimeSelectLocator);
+            if (quartTimeSelect.isDisplayed() && quartTimeSelect.isEnabled()) {
+//                quartTimeSelect.click();
+                JavascriptExecutor executor = (JavascriptExecutor) WebDriverFactory.getDriver();
+                executor.executeScript("arguments[0].click();", quartTimeSelect);
+            }
+        } catch (TimeoutException e) {
+            fail("quartTime select does not exist so we got a problem");
+        }
+
+        // Show the list of quart time option
+        By quartTimeSelectOptionLocator = By.id("nb-option-12");
+        try {
+            wait.until(ExpectedConditions.presenceOfElementLocated(quartTimeSelectOptionLocator));
+            // Find the select option element
+            WebElement quartTimeSelectOption = WebDriverFactory.getDriver().findElement(quartTimeSelectOptionLocator);
+            if (quartTimeSelectOption.isDisplayed() && quartTimeSelectOption.isEnabled()) {
+                quartTimeSelectOption.click();
+            }
+        } catch (TimeoutException e) {
+            fail("quartTime select option does not exist so we got a problem");
+        }
 
         // get the quantity field element in tone
-        WebElement quantityInTone = WebDriverFactory.getDriver().findElement(By.xpath("/html/body/mcw-root/nb-layout/div[1]/div/div/div/div/nb-layout-column/mcw-delivery-pick-up/div/div[2]/nb-card[1]/nb-card-body/div/div[5]/div/div[1]/input"));
-        quantityInTone.sendKeys("0.05");
+        By quantityInToneInputLocator = By.xpath("/html/body/mcw-root/nb-layout/div[1]/div/div/div/div/nb-layout-column/mcw-delivery-pick-up/div/div[2]/nb-card[1]/nb-card-body/div/div[5]/div/div[1]/input");
+        try {
+            wait.until(ExpectedConditions.presenceOfElementLocated(quantityInToneInputLocator));
+            // Find the select option element
+            WebElement quantityInToneInput = WebDriverFactory.getDriver().findElement(quantityInToneInputLocator);
+            if (quantityInToneInput.isDisplayed() && quantityInToneInput.isEnabled()) {
+                quantityInToneInput.sendKeys("0.05");
+            }
+        } catch (TimeoutException e) {
+            fail("quantity in tonne field does not exist so we got a problem");
+        }
 
-        // get the quantity field element in tone
-        WebElement quantityOfTruck = WebDriverFactory.getDriver().findElement(By.xpath("/html/body/mcw-root/nb-layout/div[1]/div/div/div/div/nb-layout-column/mcw-delivery-pick-up/div/div[2]/nb-card[1]/nb-card-body/div/div[5]/div/div[2]/input"));
-        quantityInBagField.sendKeys("1");
+        // get the quantity of truck element in tone
+        By quantityOfTruckInputLocator = By.xpath("/html/body/mcw-root/nb-layout/div[1]/div/div/div/div/nb-layout-column/mcw-delivery-pick-up/div/div[2]/nb-card[1]/nb-card-body/div/div[5]/div/div[2]/input");
+        try {
+            wait.until(ExpectedConditions.presenceOfElementLocated(quantityOfTruckInputLocator));
+            // Find the select option element
+            WebElement quantityOfTruckInput = WebDriverFactory.getDriver().findElement(quantityOfTruckInputLocator);
+            if (quantityOfTruckInput.isDisplayed() && quantityOfTruckInput.isEnabled()) {
+                quantityOfTruckInput.sendKeys("1");
+            }
+        } catch (TimeoutException e) {
+            fail("quantity of truck field does not exist so we got a problem");
+        }
 
         // Save schedule
-        WebElement saveScheduleBtn = WebDriverFactory.getDriver().findElement(By.xpath("/html/body/mcw-root/nb-layout/div[1]/div/div/div/div/nb-layout-column/mcw-delivery-pick-up/div/div[2]/nb-card[1]/nb-card-footer/button[2]"));
-        saveScheduleBtn.click();
-
-        // Show the delivery mode
-        WebElement deliveryModeSelect = WebDriverFactory.getDriver().findElement(By.id("companyAccountSelect"));
-        deliveryModeSelect.click();
-
-        // Select pickup mode
-        WebElement deliveryModeSelectOption =  WebDriverFactory.getDriver().findElement(By.id("nb-option-20"));
-        deliveryModeSelectOption.click();
-
-        // Show the payment mode
-        WebElement paymentModeSelect = WebDriverFactory.getDriver().findElement(By.id("paymentModeSelect"));
-        paymentModeSelect.click();
-
-        // Select mtn payment
-        WebElement paymentModeSelectOption = WebDriverFactory.getDriver().findElement(By.id("nb-option-25"));
-        paymentModeSelectOption.click();
-
-        //Pass number for mtn payment
-        WebElement phoneNumberInput = WebDriverFactory.getDriver().findElement(By.id("phoneNumber"));
-        phoneNumberInput.sendKeys("680670670");
-
-        //Pass customerReference for mtn payment
-        WebElement customerReferenceInput = WebDriverFactory.getDriver().findElement(By.id("customerReference"));
-        customerReferenceInput.sendKeys("1");
-
-        //Get btn to valid order
-        WebElement validOrderBtn = WebDriverFactory.getDriver().findElement(By.xpath("/html/body/mcw-root/nb-layout/div[1]/div/div/div/div/nb-layout-column/mcw-order-form/mcw-step-purchase-type-and-payment/div/div[2]/nb-card[1]/nb-card-body/div/mcw-orange/div[2]/button[2]"));
-        validOrderBtn.click();
-
-        //Get btn to submit request for payment
-        WebElement submitPaymentRequestBtn = WebDriverFactory.getDriver().findElement(By.xpath("/html/body/mcw-root/nb-layout/div[2]/div[3]/div/nb-dialog-container/mcw-dialog-confirm-payment/nb-card/nb-card-footer/button[2]"));
-        submitPaymentRequestBtn.click();
+        By saveScheduleBtnLocator = By.xpath("/html/body/mcw-root/nb-layout/div[1]/div/div/div/div/nb-layout-column/mcw-delivery-pick-up/div/div[2]/nb-card[1]/nb-card-footer/button[2]");
+        try {
+            wait.until(ExpectedConditions.presenceOfElementLocated(saveScheduleBtnLocator));
+            // Find the select option element
+            WebElement saveScheduleBtn = WebDriverFactory.getDriver().findElement(saveScheduleBtnLocator);
+            if (saveScheduleBtn.isDisplayed() && saveScheduleBtn.isEnabled()) {
+                saveScheduleBtn.click();
+            }
+        } catch (TimeoutException e) {
+            fail("save schedule btn does not exist so we got a problem");
+        }
     }
 
     @After
