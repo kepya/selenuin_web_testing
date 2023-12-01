@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7db8d85b-42fc-4e19-90e2-e53e1c9026b5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/selenium/test/projets/cimencam/NewOrderTestFeature.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/selenium/test/projets/cimencam/NewOrderTestFeature.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/selenium/test/projets/cimencam/NewOrderTestFeature.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/selenium/test/webtestsbase/WebDriverFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/selenium/test/webtestsbase/WebDriverFactory.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +100,7 @@
       <recent name="C:\Users\GLC\Documents\Projet Java\pipeline" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.LoginTestFeature">
+  <component name="RunManager" selected="JUnit.NewOrderTestFeature">
     <configuration default="true" type="Applet" factoryName="Applet">
       <module name="" />
       <option name="MAIN_CLASS_NAME" />
@@ -133,26 +134,6 @@
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AdministrationTestFeatures.login" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="selenium-app" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.selenium.test.projets.cimencam.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.selenium.test.projets.cimencam" />
-      <option name="MAIN_CLASS_NAME" value="com.selenium.test.projets.cimencam.AdministrationTestFeatures" />
-      <option name="METHOD_NAME" value="login" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -216,6 +197,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="NewOrderTestFeature" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="selenium-app" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.selenium.test.projets.cimencam.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.selenium.test.projets.cimencam" />
+      <option name="MAIN_CLASS_NAME" value="com.selenium.test.projets.cimencam.NewOrderTestFeature" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="TEST_OBJECT" value="class" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -249,18 +249,18 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.NewOrderTestFeature" />
         <item itemvalue="JUnit.LoginTestFeature" />
         <item itemvalue="JUnit.LoginTestFeature.adminLoginSuccessfully" />
         <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.LoginTestFeature.login" />
-        <item itemvalue="JUnit.AdministrationTestFeatures.login" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="c33a66eb-5114-40f1-93e6-ef810c70e4b9" name="Default" comment="" />
+      <changelist id="7db8d85b-42fc-4e19-90e2-e53e1c9026b5" name="Changes" comment="" />
       <created>1438203775890</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
