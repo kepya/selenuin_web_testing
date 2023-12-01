@@ -3,16 +3,15 @@ package com.selenium.test.projets.cimencam;
 import com.selenium.test.junit.rules.ScreenShotOnFailRule;
 import com.selenium.test.utils.TimeUtils;
 import com.selenium.test.webtestsbase.WebDriverFactory;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Rule;
-import org.junit.Test;
+import org.junit.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.util.List;
 
 import static org.junit.Assert.fail;
 
@@ -71,7 +70,7 @@ public class NewOrderTestFeature {
             fail("Login failed");
         }
 
-        /***** Order Proces ****/
+        /***** Order Process ****/
         boolean storeSelectInProgress = true;
         By newPurchaseBtnLocator = By.className("new-purchase-btn");
         try {
@@ -86,7 +85,6 @@ public class NewOrderTestFeature {
         By storeSelectLocator = By.id("storeSelect");
         try {
             wait.until(ExpectedConditions.presenceOfElementLocated(storeSelectLocator));
-            // Find the select element
             WebElement storeSelect = WebDriverFactory.getDriver().findElement(storeSelectLocator);
             storeSelect.click();
         } catch (TimeoutException e) {
@@ -96,7 +94,6 @@ public class NewOrderTestFeature {
         By storeSelectOptionLocator = By.id("nb-option-0");
         try {
             wait.until(ExpectedConditions.presenceOfElementLocated(storeSelectOptionLocator));
-            // Find the select option element
             WebElement storeSelectOption = WebDriverFactory.getDriver().findElement(storeSelectOptionLocator);
             storeSelectOption.click();
             TimeUtils.waitForSeconds(4);
@@ -108,7 +105,6 @@ public class NewOrderTestFeature {
         By addArticleBtnLocator = By.className("add-elt-btn");
         try {
             wait.until(ExpectedConditions.presenceOfElementLocated(addArticleBtnLocator));
-            // Find the select option element
             WebElement addArticleBtn = WebDriverFactory.getDriver().findElement(addArticleBtnLocator);
             if (addArticleBtn.isDisplayed() && addArticleBtn.isEnabled()) {
                 addArticleBtn.click();
@@ -121,7 +117,6 @@ public class NewOrderTestFeature {
         By productSelectLocator = By.xpath("/html/body/mcw-root/nb-layout/div[1]/div/div/div/div/nb-layout-column/mcw-order-form/mcw-step-store-and-items/div/nb-card/nb-card-body/div[2]/ul/li[2]/div[2]/nb-select");
         try {
             wait.until(ExpectedConditions.presenceOfElementLocated(productSelectLocator));
-            // Find the select option element
             WebElement productSelect = WebDriverFactory.getDriver().findElement(productSelectLocator);
             if (productSelect.isDisplayed() && productSelect.isEnabled()) {
                 productSelect.click();
@@ -134,7 +129,6 @@ public class NewOrderTestFeature {
         By productSelectOptionLocator = By.id("nb-option-9");
         try {
             wait.until(ExpectedConditions.presenceOfElementLocated(productSelectOptionLocator));
-            // Find the select option element
             WebElement productSelectOption = WebDriverFactory.getDriver().findElement(productSelectOptionLocator);
             if (productSelectOption.isDisplayed() && productSelectOption.isEnabled()) {
                 productSelectOption.click();
@@ -147,7 +141,6 @@ public class NewOrderTestFeature {
         By quantityInBagFieldLocator = By.className("quantity-field");
         try {
             wait.until(ExpectedConditions.presenceOfElementLocated(quantityInBagFieldLocator));
-            // Find the select option element
             WebElement quantityInBagField = WebDriverFactory.getDriver().findElement(quantityInBagFieldLocator);
             if (quantityInBagField.isDisplayed() && quantityInBagField.isEnabled()) {
                 quantityInBagField.sendKeys("1");
@@ -160,7 +153,6 @@ public class NewOrderTestFeature {
         By scheduleArticleBtnLocator = By.xpath("/html/body/mcw-root/nb-layout/div[1]/div/div/div/div/nb-layout-column/mcw-order-form/mcw-step-store-and-items/div/nb-card/nb-card-body/div[2]/div[2]/button");
         try {
             wait.until(ExpectedConditions.presenceOfElementLocated(scheduleArticleBtnLocator));
-            // Find the select option element
             WebElement scheduleArticleBtn = WebDriverFactory.getDriver().findElement(scheduleArticleBtnLocator);
             if (scheduleArticleBtn.isDisplayed() && scheduleArticleBtn.isEnabled()) {
                 scheduleArticleBtn.click();
@@ -173,7 +165,6 @@ public class NewOrderTestFeature {
         By schedule1ArticleBtnLocator = By.className("add-elt-btn");
         try {
             wait.until(ExpectedConditions.presenceOfElementLocated(schedule1ArticleBtnLocator));
-            // Find the select option element
             WebElement schedule1ArticleBtn = WebDriverFactory.getDriver().findElement(schedule1ArticleBtnLocator);
             if (schedule1ArticleBtn.isDisplayed() && schedule1ArticleBtn.isEnabled()) {
                 schedule1ArticleBtn.click();
@@ -186,7 +177,6 @@ public class NewOrderTestFeature {
         By withdrawalInputLocator = By.xpath("/html/body/mcw-root/nb-layout/div[1]/div/div/div/div/nb-layout-column/mcw-delivery-pick-up/div/div[2]/nb-card[1]/nb-card-body/div/div[1]/input");
         try {
             wait.until(ExpectedConditions.presenceOfElementLocated(withdrawalInputLocator));
-            // Find the select option element
             WebElement withdrawalInput = WebDriverFactory.getDriver().findElement(withdrawalInputLocator);
             if (withdrawalInput.isDisplayed() && withdrawalInput.isEnabled()) {
                 withdrawalInput.click();
@@ -209,14 +199,12 @@ public class NewOrderTestFeature {
 
         // Show the list of quart time
         By quartTimeSelectLocator = By.id("quartSelect");
-//        By quartTimeSelectLocator = By.xpath("/html/body/mcw-root/nb-layout/div[1]/div/div/div/div/nb-layout-column/mcw-delivery-pick-up/div/div[2]/nb-card[1]/nb-card-body/div/div[2]/nb-select");
 
         try {
             wait.until(ExpectedConditions.presenceOfElementLocated(quartTimeSelectLocator));
             wait.until(ExpectedConditions.elementToBeClickable(quartTimeSelectLocator));
             WebElement quartTimeSelect = WebDriverFactory.getDriver().findElement(quartTimeSelectLocator);
             if (quartTimeSelect.isDisplayed() && quartTimeSelect.isEnabled()) {
-//                quartTimeSelect.click();
                 JavascriptExecutor executor = (JavascriptExecutor) WebDriverFactory.getDriver();
                 executor.executeScript("arguments[0].click();", quartTimeSelect);
             }
@@ -228,7 +216,6 @@ public class NewOrderTestFeature {
         By quartTimeSelectOptionLocator = By.id("nb-option-12");
         try {
             wait.until(ExpectedConditions.presenceOfElementLocated(quartTimeSelectOptionLocator));
-            // Find the select option element
             WebElement quartTimeSelectOption = WebDriverFactory.getDriver().findElement(quartTimeSelectOptionLocator);
             if (quartTimeSelectOption.isDisplayed() && quartTimeSelectOption.isEnabled()) {
                 quartTimeSelectOption.click();
@@ -241,7 +228,6 @@ public class NewOrderTestFeature {
         By quantityInToneInputLocator = By.xpath("/html/body/mcw-root/nb-layout/div[1]/div/div/div/div/nb-layout-column/mcw-delivery-pick-up/div/div[2]/nb-card[1]/nb-card-body/div/div[5]/div/div[1]/input");
         try {
             wait.until(ExpectedConditions.presenceOfElementLocated(quantityInToneInputLocator));
-            // Find the select option element
             WebElement quantityInToneInput = WebDriverFactory.getDriver().findElement(quantityInToneInputLocator);
             if (quantityInToneInput.isDisplayed() && quantityInToneInput.isEnabled()) {
                 quantityInToneInput.sendKeys("0.05");
@@ -254,7 +240,6 @@ public class NewOrderTestFeature {
         By quantityOfTruckInputLocator = By.xpath("/html/body/mcw-root/nb-layout/div[1]/div/div/div/div/nb-layout-column/mcw-delivery-pick-up/div/div[2]/nb-card[1]/nb-card-body/div/div[5]/div/div[2]/input");
         try {
             wait.until(ExpectedConditions.presenceOfElementLocated(quantityOfTruckInputLocator));
-            // Find the select option element
             WebElement quantityOfTruckInput = WebDriverFactory.getDriver().findElement(quantityOfTruckInputLocator);
             if (quantityOfTruckInput.isDisplayed() && quantityOfTruckInput.isEnabled()) {
                 quantityOfTruckInput.sendKeys("1");
@@ -267,13 +252,136 @@ public class NewOrderTestFeature {
         By saveScheduleBtnLocator = By.xpath("/html/body/mcw-root/nb-layout/div[1]/div/div/div/div/nb-layout-column/mcw-delivery-pick-up/div/div[2]/nb-card[1]/nb-card-footer/button[2]");
         try {
             wait.until(ExpectedConditions.presenceOfElementLocated(saveScheduleBtnLocator));
-            // Find the select option element
             WebElement saveScheduleBtn = WebDriverFactory.getDriver().findElement(saveScheduleBtnLocator);
             if (saveScheduleBtn.isDisplayed() && saveScheduleBtn.isEnabled()) {
                 saveScheduleBtn.click();
             }
         } catch (TimeoutException e) {
             fail("save schedule btn does not exist so we got a problem");
+        }
+
+        // Go on next step
+        By nextStepAfterScheduleBtnLocator = By.xpath("/html/body/mcw-root/nb-layout/div[1]/div/div/div/div/nb-layout-column/mcw-delivery/div/nb-card/nb-card-footer/button[2]");
+        try {
+            wait.until(ExpectedConditions.presenceOfElementLocated(nextStepAfterScheduleBtnLocator));
+            WebElement nextStepAfterScheduleBtn = WebDriverFactory.getDriver().findElement(nextStepAfterScheduleBtnLocator);
+            if (nextStepAfterScheduleBtn.isDisplayed() && nextStepAfterScheduleBtn.isEnabled()) {
+                nextStepAfterScheduleBtn.click();
+            }
+        } catch (TimeoutException e) {
+            fail("next step btn does not exist so we got a problem");
+        }
+
+        // Show the delivery mode
+        By deliveryModeSelectLocator = By.id("companyAccountSelect");
+        try {
+            wait.until(ExpectedConditions.presenceOfElementLocated(deliveryModeSelectLocator));
+            WebElement deliveryModeSelect = WebDriverFactory.getDriver().findElement(deliveryModeSelectLocator);
+            if (deliveryModeSelect.isDisplayed() && deliveryModeSelect.isEnabled()) {
+                JavascriptExecutor executor = (JavascriptExecutor) WebDriverFactory.getDriver();
+                executor.executeScript("arguments[0].click();", deliveryModeSelect);
+            }
+        } catch (TimeoutException e) {
+            fail("delivery mode select does not exist so we got a problem");
+        }
+
+        // Show the delivery mode option and select pick up
+        By deliveryModeSelectOptionLocator = By.xpath("/html/body/mcw-root/nb-layout/div[2]/div[2]/div/nb-option-list/ul/nb-option[1]");
+        try {
+            wait.until(ExpectedConditions.presenceOfElementLocated(deliveryModeSelectOptionLocator));
+            WebElement deliveryModeSelectOption = WebDriverFactory.getDriver().findElement(deliveryModeSelectOptionLocator);
+            if (deliveryModeSelectOption.isDisplayed() && deliveryModeSelectOption.isEnabled()) {
+                JavascriptExecutor executor = (JavascriptExecutor) WebDriverFactory.getDriver();
+                executor.executeScript("arguments[0].click();", deliveryModeSelectOption);
+            }
+        } catch (TimeoutException e) {
+            fail("delivery mode select option does not exist so we got a problem");
+        }
+
+        // Show the payment mode
+        By paymentModeSelectLocator = By.id("paymentModeSelect");
+        try {
+            wait.until(ExpectedConditions.presenceOfElementLocated(paymentModeSelectLocator));
+            WebElement paymentModeSelect = WebDriverFactory.getDriver().findElement(paymentModeSelectLocator);
+            if (paymentModeSelect.isDisplayed() && paymentModeSelect.isEnabled()) {
+                JavascriptExecutor executor = (JavascriptExecutor) WebDriverFactory.getDriver();
+                executor.executeScript("arguments[0].click();", paymentModeSelect);
+            }
+        } catch (TimeoutException e) {
+            fail("payment mode select does not exist so we got a problem");
+        }
+
+        // Show the payment mode option and select mtn payment
+        By paymentModeSelectOptionLocator = By.xpath("/html/body/mcw-root/nb-layout/div[2]/div[2]/div/nb-option-list/ul/nb-option[4]");
+        try {
+            wait.until(ExpectedConditions.presenceOfElementLocated(paymentModeSelectOptionLocator));
+            WebElement paymentModeSelectOption = WebDriverFactory.getDriver().findElement(paymentModeSelectOptionLocator);
+            if (paymentModeSelectOption.isDisplayed() && paymentModeSelectOption.isEnabled()) {
+                JavascriptExecutor executor = (JavascriptExecutor) WebDriverFactory.getDriver();
+                executor.executeScript("arguments[0].click();", paymentModeSelectOption);
+            }
+        } catch (TimeoutException e) {
+            fail("payment mode select option does not exist so we got a problem");
+        }
+
+        //Pass number for mtn payment
+        By phoneNumberInputLocator = By.id("phoneNumber");
+        try {
+            wait.until(ExpectedConditions.presenceOfElementLocated(phoneNumberInputLocator));
+            WebElement phoneNumberInput = WebDriverFactory.getDriver().findElement(phoneNumberInputLocator);
+            if (phoneNumberInput.isDisplayed() && phoneNumberInput.isEnabled()) {
+                phoneNumberInput.sendKeys("680670670");
+            }
+        } catch (TimeoutException e) {
+            fail("phone number field does not exist so we got a problem");
+        }
+
+        //Pass customerReference for mtn payment
+        By customerReferenceInputLocator = By.id("customerReference");
+        try {
+            wait.until(ExpectedConditions.presenceOfElementLocated(customerReferenceInputLocator));
+            WebElement customerReferenceInput = WebDriverFactory.getDriver().findElement(customerReferenceInputLocator);
+            if (customerReferenceInput.isDisplayed() && customerReferenceInput.isEnabled()) {
+                customerReferenceInput.sendKeys("1");
+            }
+        } catch (TimeoutException e) {
+            fail("customer reference field does not exist so we got a problem");
+        }
+
+        //Get btn to valid order
+        By validOrderAndShowModalConfirmBtnLocator = By.className("add-elt-btn");
+        try {
+            wait.until(ExpectedConditions.presenceOfElementLocated(validOrderAndShowModalConfirmBtnLocator));
+            WebElement validOrderAndShowModalConfirmBtn = WebDriverFactory.getDriver().findElement(validOrderAndShowModalConfirmBtnLocator);
+            if (validOrderAndShowModalConfirmBtn.isDisplayed() && validOrderAndShowModalConfirmBtn.isEnabled()) {
+                validOrderAndShowModalConfirmBtn.click();
+            }
+        } catch (TimeoutException e) {
+            fail("valid order btn does not exist so we got a problem");
+        }
+
+        //Get btn to submit request for payment
+        By submitPaymentRequestBtnLocator = By.xpath("/html/body/mcw-root/nb-layout/div[2]/div[3]/div/nb-dialog-container/mcw-dialog-confirm-payment/nb-card/nb-card-footer/button[2]");
+        try {
+            wait.until(ExpectedConditions.presenceOfElementLocated(submitPaymentRequestBtnLocator));
+            WebElement submitPaymentRequestBtn = WebDriverFactory.getDriver().findElement(submitPaymentRequestBtnLocator);
+            if (submitPaymentRequestBtn.isDisplayed() && submitPaymentRequestBtn.isEnabled()) {
+                submitPaymentRequestBtn.click();
+            }
+        } catch (TimeoutException e) {
+            fail("submit payment request btn does not exist so we got a problem");
+        }
+
+        /***** Check if all pass fine *****/
+        //for that we should have entries in this page, if we don't have entries, we got problems
+        By orderListLocator = By.className("list-elt");
+        try {
+            wait.until(ExpectedConditions.presenceOfElementLocated(orderListLocator));
+            List<WebElement> orderLists = WebDriverFactory.getDriver().findElements(orderListLocator);
+            System.out.println("leng: " + orderLists.size());
+            Assert.assertFalse(orderLists.isEmpty());
+        } catch (TimeoutException e) {
+            fail("All process of order pass but the payment got problems so we cannot validated this feature");
         }
     }
 
