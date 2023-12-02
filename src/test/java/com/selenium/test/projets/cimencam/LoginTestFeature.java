@@ -25,7 +25,7 @@ public class LoginTestFeature {
     }
 
     /**
-     * Created by KEPYA Christian on 28.11.23.
+     * Created on 28.11.23.
      * Uses JUnit test framework
      * Method for admin login testing. This test should pass without any problems
      */
@@ -71,7 +71,7 @@ public class LoginTestFeature {
     }
 
     /**
-     * Created by KEPYA Christian on 28.11.23.
+     * Created on 28.11.23.
      * Uses JUnit test framework
      * Method for client login testing. This test should pass without any problems
      */

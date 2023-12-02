@@ -16,7 +16,7 @@ import java.util.List;
 import static org.junit.Assert.fail;
 
 /**
- * Created by KEPYA Christian on 30.11.23.
+ * Created on 30.11.23.
  * Uses JUnit test framework
  * Class for testing new order feature (client and admin login)
  */
@@ -30,7 +30,7 @@ public class NewOrderTestFeature {
     }
 
     /**
-     * Created by KEPYA Christian on 28.11.23.
+     * Created on 28.11.23.
      * Uses JUnit test framework
      * Method for client pickup testing.
      * Here we are testing the order process with pick up withdrawal
@@ -390,7 +390,7 @@ public class NewOrderTestFeature {
     }
 
     /**
-     * Created by KEPYA Christian on 28.11.23.
+     * Created on 28.11.23.
      * Uses JUnit test framework
      * Method for client pickup testing.
      * Here we are testing the order process with pick up withdrawal
