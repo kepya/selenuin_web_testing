@@ -1,4 +1,4 @@
-package com.selenium.test.projets.cimencam;
+package com.selenium.test.projets.cimencam.client.company;
 
 import com.selenium.test.junit.rules.ScreenShotOnFailRule;
 import com.selenium.test.utils.TimeUtils;
