@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7db8d85b-42fc-4e19-90e2-e53e1c9026b5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/selenium/test/projets/cimencam/client/company/HomeMenu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/selenium/test/projets/cimencam/client/company/OtherMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/selenium/test/projets/cimencam/client/company/OtherMenu.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +107,7 @@
       <recent name="C:\Users\GLC\Documents\Projet Java\pipeline" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.HomeMenu.newOrder">
+  <component name="RunManager" selected="JUnit.OtherMenu.editingInvoicesTestByNumber1">
     <configuration default="true" type="Applet" factoryName="Applet">
       <module name="" />
       <option name="MAIN_CLASS_NAME" />
@@ -131,7 +131,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HomeMenu.home" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="OrderListTestFeature.testValidateOrderFromOrderMenuInsufficientAccountWithCancelBtn" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="selenium-app" />
       <extension name="coverage">
         <pattern>
@@ -140,8 +140,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.selenium.test.projets.cimencam.client.company" />
-      <option name="MAIN_CLASS_NAME" value="com.selenium.test.projets.cimencam.client.company.HomeMenu" />
-      <option name="METHOD_NAME" value="home" />
+      <option name="MAIN_CLASS_NAME" value="com.selenium.test.projets.cimencam.client.company.OrderListTestFeature" />
+      <option name="METHOD_NAME" value="testValidateOrderFromOrderMenuInsufficientAccountWithCancelBtn" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="TEST_SEARCH_SCOPE">
@@ -151,67 +151,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HomeMenu.logout" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="selenium-app" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.selenium.test.projets.cimencam.client.company.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.selenium.test.projets.cimencam.client.company" />
-      <option name="MAIN_CLASS_NAME" value="com.selenium.test.projets.cimencam.client.company.HomeMenu" />
-      <option name="METHOD_NAME" value="logout" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="HomeMenu.myAccount" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="selenium-app" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.selenium.test.projets.cimencam.client.company.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.selenium.test.projets.cimencam.client.company" />
-      <option name="MAIN_CLASS_NAME" value="com.selenium.test.projets.cimencam.client.company.HomeMenu" />
-      <option name="METHOD_NAME" value="myAccount" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="HomeMenu.newOrder" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="selenium-app" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.selenium.test.projets.cimencam.client.company.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.selenium.test.projets.cimencam.client.company" />
-      <option name="MAIN_CLASS_NAME" value="com.selenium.test.projets.cimencam.client.company.HomeMenu" />
-      <option name="METHOD_NAME" value="newOrder" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="OtherMenu.aeNotChargedWithCancelButton" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="OtherMenu.aeNotChargedWithSendButton" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="selenium-app" />
       <extension name="coverage">
         <pattern>
@@ -221,7 +161,67 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.selenium.test.projets.cimencam.client.company" />
       <option name="MAIN_CLASS_NAME" value="com.selenium.test.projets.cimencam.client.company.OtherMenu" />
-      <option name="METHOD_NAME" value="aeNotChargedWithCancelButton" />
+      <option name="METHOD_NAME" value="aeNotChargedWithSendButton" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OtherMenu.bankStatementWithSendBtn" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="selenium-app" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.selenium.test.projets.cimencam.client.company.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.selenium.test.projets.cimencam.client.company" />
+      <option name="MAIN_CLASS_NAME" value="com.selenium.test.projets.cimencam.client.company.OtherMenu" />
+      <option name="METHOD_NAME" value="bankStatementWithSendBtn" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OtherMenu.editingInvoicesTestByNumber1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="selenium-app" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.selenium.test.projets.cimencam.client.company.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.selenium.test.projets.cimencam.client.company" />
+      <option name="MAIN_CLASS_NAME" value="com.selenium.test.projets.cimencam.client.company.OtherMenu" />
+      <option name="METHOD_NAME" value="editingInvoicesTestByNumber1" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OtherMenu.showAccountValue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="selenium-app" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.selenium.test.projets.cimencam.client.company.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.selenium.test.projets.cimencam.client.company" />
+      <option name="MAIN_CLASS_NAME" value="com.selenium.test.projets.cimencam.client.company.OtherMenu" />
+      <option name="METHOD_NAME" value="showAccountValue" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="TEST_SEARCH_SCOPE">
@@ -264,11 +264,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.HomeMenu.newOrder" />
-        <item itemvalue="JUnit.HomeMenu.logout" />
-        <item itemvalue="JUnit.HomeMenu.myAccount" />
-        <item itemvalue="JUnit.HomeMenu.home" />
-        <item itemvalue="JUnit.OtherMenu.aeNotChargedWithCancelButton" />
+        <item itemvalue="JUnit.OtherMenu.editingInvoicesTestByNumber1" />
+        <item itemvalue="JUnit.OtherMenu.aeNotChargedWithSendButton" />
+        <item itemvalue="JUnit.OtherMenu.showAccountValue" />
+        <item itemvalue="JUnit.OtherMenu.bankStatementWithSendBtn" />
+        <item itemvalue="JUnit.OrderListTestFeature.testValidateOrderFromOrderMenuInsufficientAccountWithCancelBtn" />
       </list>
     </recent_temporary>
   </component>
