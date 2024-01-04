@@ -20,11 +20,6 @@
     <orderEntry type="library" name="Maven: xml-apis:xml-apis:1.4.01" level="project" />
     <orderEntry type="library" name="Maven: org.seleniumhq.selenium:selenium-java:2.45.0" level="project" />
     <orderEntry type="library" name="Maven: org.seleniumhq.selenium:selenium-chrome-driver:2.45.0" level="project" />
-    <orderEntry type="library" name="Maven: org.seleniumhq.selenium:selenium-remote-driver:2.45.0" level="project" />
-    <orderEntry type="library" name="Maven: cglib:cglib-nodep:2.1_3" level="project" />
-    <orderEntry type="library" name="Maven: com.google.code.gson:gson:2.3.1" level="project" />
-    <orderEntry type="library" name="Maven: org.seleniumhq.selenium:selenium-api:2.45.0" level="project" />
-    <orderEntry type="library" name="Maven: com.google.guava:guava:18.0" level="project" />
     <orderEntry type="library" name="Maven: org.seleniumhq.selenium:selenium-htmlunit-driver:2.45.0" level="project" />
     <orderEntry type="library" name="Maven: net.sourceforge.htmlunit:htmlunit:2.15" level="project" />
     <orderEntry type="library" name="Maven: xalan:xalan:2.7.1" level="project" />
@@ -52,9 +47,41 @@
     <orderEntry type="library" name="Maven: net.java.dev.jna:jna:3.4.0" level="project" />
     <orderEntry type="library" name="Maven: net.java.dev.jna:platform:3.4.0" level="project" />
     <orderEntry type="library" name="Maven: org.seleniumhq.selenium:selenium-safari-driver:2.45.0" level="project" />
-    <orderEntry type="library" name="Maven: org.seleniumhq.selenium:selenium-support:2.45.0" level="project" />
     <orderEntry type="library" name="Maven: org.webbitserver:webbit:0.4.14" level="project" />
     <orderEntry type="library" name="Maven: io.netty:netty:3.5.2.Final" level="project" />
     <orderEntry type="library" name="Maven: org.seleniumhq.selenium:selenium-leg-rc:2.45.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: io.appium:java-client:9.0.0" level="project" />
+    <orderEntry type="library" name="Maven: org.seleniumhq.selenium:selenium-api:4.16.1" level="project" />
+    <orderEntry type="library" name="Maven: org.seleniumhq.selenium:selenium-remote-driver:4.16.1" level="project" />
+    <orderEntry type="library" name="Maven: com.google.auto.service:auto-service-annotations:1.1.1" level="project" />
+    <orderEntry type="library" name="Maven: com.google.guava:guava:32.1.2-jre" level="project" />
+    <orderEntry type="library" name="Maven: com.google.guava:failureaccess:1.0.1" level="project" />
+    <orderEntry type="library" name="Maven: com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava" level="project" />
+    <orderEntry type="library" name="Maven: com.google.code.findbugs:jsr305:3.0.2" level="project" />
+    <orderEntry type="library" name="Maven: org.checkerframework:checker-qual:3.33.0" level="project" />
+    <orderEntry type="library" name="Maven: com.google.errorprone:error_prone_annotations:2.18.0" level="project" />
+    <orderEntry type="library" name="Maven: com.google.j2objc:j2objc-annotations:2.8" level="project" />
+    <orderEntry type="library" name="Maven: io.opentelemetry:opentelemetry-api:1.28.0" level="project" />
+    <orderEntry type="library" name="Maven: io.opentelemetry:opentelemetry-context:1.28.0" level="project" />
+    <orderEntry type="library" name="Maven: io.opentelemetry:opentelemetry-exporter-logging:1.28.0" level="project" />
+    <orderEntry type="library" name="Maven: io.opentelemetry:opentelemetry-sdk-metrics:1.28.0" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: io.opentelemetry:opentelemetry-extension-incubator:1.28.0-alpha" level="project" />
+    <orderEntry type="library" name="Maven: io.opentelemetry:opentelemetry-sdk-logs:1.28.0" level="project" />
+    <orderEntry type="library" name="Maven: io.opentelemetry:opentelemetry-sdk-common:1.28.0" level="project" />
+    <orderEntry type="library" name="Maven: io.opentelemetry:opentelemetry-sdk-extension-autoconfigure-spi:1.28.0" level="project" />
+    <orderEntry type="library" name="Maven: io.opentelemetry:opentelemetry-sdk-extension-autoconfigure:1.28.0" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: io.opentelemetry:opentelemetry-api-events:1.28.0-alpha" level="project" />
+    <orderEntry type="library" name="Maven: io.opentelemetry:opentelemetry-sdk-trace:1.28.0" level="project" />
+    <orderEntry type="library" name="Maven: io.opentelemetry:opentelemetry-sdk:1.28.0" level="project" />
+    <orderEntry type="library" name="Maven: io.opentelemetry:opentelemetry-semconv:1.28.0-alpha" level="project" />
+    <orderEntry type="library" name="Maven: net.bytebuddy:byte-buddy:1.14.5" level="project" />
+    <orderEntry type="library" name="Maven: org.seleniumhq.selenium:selenium-http:4.16.1" level="project" />
+    <orderEntry type="library" name="Maven: dev.failsafe:failsafe:3.3.2" level="project" />
+    <orderEntry type="library" name="Maven: org.seleniumhq.selenium:selenium-json:4.16.1" level="project" />
+    <orderEntry type="library" name="Maven: org.seleniumhq.selenium:selenium-manager:4.16.1" level="project" />
+    <orderEntry type="library" name="Maven: org.seleniumhq.selenium:selenium-os:4.16.1" level="project" />
+    <orderEntry type="library" name="Maven: org.seleniumhq.selenium:selenium-support:4.16.1" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: com.google.code.gson:gson:2.10.1" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.slf4j:slf4j-api:2.0.9" level="project" />
   </component>
 </module>
