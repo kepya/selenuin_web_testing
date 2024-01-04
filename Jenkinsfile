@@ -10,7 +10,7 @@ pipeline {
             steps {
                 script {
                     // Define custom GIT SSH command
-                    sh "ssh-agent bash -c 'ssh-add ${GIT_SSH_KEY}; git clone git@github.com:YourUsername/YourRepo.git'"
+                    sh "ssh-agent bash -c 'ssh-add ${GIT_SSH_KEY}; git clone git@github.com:kepya/selenuin_web_testing.git'"
                 }
             }
         }
