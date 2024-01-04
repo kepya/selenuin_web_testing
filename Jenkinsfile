@@ -5,13 +5,17 @@ pipeline {
         stage('Build') {
             steps {
                 //build your project
-                sh 'mvn clean install'
+                withMaven {
+                    sh 'mvn clean install'
+                } 
             }
         }
 
         stage('Test') {
             steps {
-                sh "mvn test"
+                withMaven {
+                    sh "mvn test"
+                } 
             }
         }
 
