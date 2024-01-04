@@ -1,19 +1,7 @@
 pipeline {
     agent any
  
-     environment {
-        GIT_SSH_KEY = credentials('github-ssh-key')  // ID of the SSH key added in Jenkins credentials
-    }
-
     stages {
-        stage('Checkout from GitHub') {
-            steps {
-                script {
-                    // Define custom GIT SSH command
-                    sh "ssh-agent bash -c 'ssh-add ${GIT_SSH_KEY}; git clone git@github.com:kepya/selenuin_web_testing.git'"
-                }
-            }
-        }
 
         stage('Test') {
             steps {
