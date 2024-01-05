@@ -18,7 +18,7 @@ import java.util.concurrent.ThreadLocalRandom;
 
 import static org.junit.Assert.fail;
 
-public class OrderListTestFeature {
+public class OrderListFeatureTest {
     @Rule
     public ScreenShotOnFailRule screenShotOnFailRule = new ScreenShotOnFailRule();
 
@@ -29,9 +29,9 @@ public class OrderListTestFeature {
 
     @After
     public void afterTest() {
-//        WebDriverFactory.takeScreenShot();
-//        TimeUtils.waitForSeconds(2);
-//        WebDriverFactory.finishBrowser();
+        WebDriverFactory.takeScreenShot();
+        TimeUtils.waitForSeconds(2);
+        WebDriverFactory.finishBrowser();
     }
 
     @Test

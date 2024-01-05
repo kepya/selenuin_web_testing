@@ -20,7 +20,7 @@ import static org.junit.Assert.fail;
  * Uses JUnit test framework
  * Class for testing new order feature (client and admin login)
  */
-public class NewOrderTestFeature {
+public class NewOrderFeatureTest {
     @Rule
     public ScreenShotOnFailRule screenShotOnFailRule = new ScreenShotOnFailRule();
 

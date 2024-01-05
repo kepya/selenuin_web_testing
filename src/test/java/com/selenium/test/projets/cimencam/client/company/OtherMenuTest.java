@@ -19,7 +19,7 @@ import java.util.concurrent.ThreadLocalRandom;
 
 import static org.junit.Assert.fail;
 
-public class OtherMenu {
+public class OtherMenuTest {
     @Rule
     public ScreenShotOnFailRule screenShotOnFailRule = new ScreenShotOnFailRule();
 
@@ -30,9 +30,9 @@ public class OtherMenu {
 
     @After
     public void afterTest() {
-//        WebDriverFactory.takeScreenShot();
-//        TimeUtils.waitForSeconds(2);
-//        WebDriverFactory.finishBrowser();
+        WebDriverFactory.takeScreenShot();
+        TimeUtils.waitForSeconds(2);
+        WebDriverFactory.finishBrowser();
     }
 
     @Test

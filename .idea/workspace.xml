@@ -5,15 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7db8d85b-42fc-4e19-90e2-e53e1c9026b5" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__cglib_cglib_nodep_2_1_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_3_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_18_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_api_2_45_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_remote_driver_2_45_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_support_2_45_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/selenium-app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/selenium-app.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/selenium/test/junit/tests/PageObjectTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/selenium/test/junit/tests/SimpleTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/selenium/test/pages/YouTubePage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/selenium/test/pages/YouTubeSearchResultsPage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/selenium/test/projets/cimencam/LoginTestFeature.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/selenium/test/projets/cimencam/LoginFeatureTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/selenium/test/projets/cimencam/client/company/HomeMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/selenium/test/projets/cimencam/client/company/HomeMenuTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/selenium/test/projets/cimencam/client/company/NewOrderTestFeature.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/selenium/test/projets/cimencam/client/company/NewOrderFeatureTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/selenium/test/projets/cimencam/client/company/OrderListTestFeature.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/selenium/test/projets/cimencam/client/company/OrderListFeatureTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/selenium/test/projets/cimencam/client/company/OtherMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/selenium/test/projets/cimencam/client/company/OtherMenuTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/selenium/test/projets/cimencam/client/company/ReportingTestFeature.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/selenium/test/projets/cimencam/client/company/ReportingFeatureTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/selenium/test/projets/cimencam/client/company/ScheduleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/selenium/test/projets/cimencam/client/company/ScheduleTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/selenium/test/testng/tests/PageObjectTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/selenium/test/testng/tests/SimpleTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/selenium/test/junit/tests/PageObjectTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/selenium/test/junit/tests/SimpleTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/selenium/test/pages/YouTubePage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/selenium/test/pages/YouTubeSearchResultsPage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/selenium/test/testng/tests/PageObjectTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/selenium/test/testng/tests/SimpleTest.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,13 +122,19 @@
     <property name="options.lastSelected" value="configurable.group.appearance" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\GLC\Documents\Projet Java\pipeline" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.OtherMenu.editingInvoicesTestByNumber1">
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn surefire:test" />
+    </option>
+  </component>
+  <component name="RunManager" selected="JUnit.ScheduleTest.delivery">
     <configuration default="true" type="Applet" factoryName="Applet">
       <module name="" />
       <option name="MAIN_CLASS_NAME" />
@@ -138,17 +158,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="OrderListTestFeature.testValidateOrderFromOrderMenuInsufficientAccountWithCancelBtn" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DefaultTest.defaultTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="selenium-app" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.selenium.test.projets.cimencam.client.company.*" />
+          <option name="PATTERN" value="com.selenium.test.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.selenium.test.projets.cimencam.client.company" />
-      <option name="MAIN_CLASS_NAME" value="com.selenium.test.projets.cimencam.client.company.OrderListTestFeature" />
-      <option name="METHOD_NAME" value="testValidateOrderFromOrderMenuInsufficientAccountWithCancelBtn" />
+      <option name="PACKAGE_NAME" value="com.selenium.test" />
+      <option name="MAIN_CLASS_NAME" value="com.selenium.test.DefaultTest" />
+      <option name="METHOD_NAME" value="defaultTest" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="TEST_SEARCH_SCOPE">
@@ -158,17 +178,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="OtherMenu.aeNotChargedWithSendButton" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DefaultTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="selenium-app" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.selenium.test.projets.cimencam.client.company.*" />
+          <option name="PATTERN" value="com.selenium.test.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.selenium.test.projets.cimencam.client.company" />
-      <option name="MAIN_CLASS_NAME" value="com.selenium.test.projets.cimencam.client.company.OtherMenu" />
-      <option name="METHOD_NAME" value="aeNotChargedWithSendButton" />
+      <option name="PACKAGE_NAME" value="com.selenium.test" />
+      <option name="MAIN_CLASS_NAME" value="com.selenium.test.DefaultTest" />
+      <option name="METHOD_NAME" value="test" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="TEST_SEARCH_SCOPE">
@@ -178,18 +198,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="OtherMenu.bankStatementWithSendBtn" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="LoginFeatureTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="selenium-app" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.selenium.test.projets.cimencam.client.company.*" />
+          <option name="PATTERN" value="com.selenium.test.projets.cimencam.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.selenium.test.projets.cimencam.client.company" />
-      <option name="MAIN_CLASS_NAME" value="com.selenium.test.projets.cimencam.client.company.OtherMenu" />
-      <option name="METHOD_NAME" value="bankStatementWithSendBtn" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="com.selenium.test.projets.cimencam" />
+      <option name="MAIN_CLASS_NAME" value="com.selenium.test.projets.cimencam.LoginFeatureTest" />
+      <option name="TEST_OBJECT" value="class" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="TEST_SEARCH_SCOPE">
         <value defaultName="moduleWithDependencies" />
@@ -198,7 +217,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="OtherMenu.editingInvoicesTestByNumber1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="OtherMenuTest.editingInvoicesTestByNumber1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="selenium-app" />
       <extension name="coverage">
         <pattern>
@@ -207,7 +226,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.selenium.test.projets.cimencam.client.company" />
-      <option name="MAIN_CLASS_NAME" value="com.selenium.test.projets.cimencam.client.company.OtherMenu" />
+      <option name="MAIN_CLASS_NAME" value="com.selenium.test.projets.cimencam.client.company.OtherMenuTest" />
       <option name="METHOD_NAME" value="editingInvoicesTestByNumber1" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -218,7 +237,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="OtherMenu.showAccountValue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ScheduleTest.delivery" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="selenium-app" />
       <extension name="coverage">
         <pattern>
@@ -227,8 +246,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.selenium.test.projets.cimencam.client.company" />
-      <option name="MAIN_CLASS_NAME" value="com.selenium.test.projets.cimencam.client.company.OtherMenu" />
-      <option name="METHOD_NAME" value="showAccountValue" />
+      <option name="MAIN_CLASS_NAME" value="com.selenium.test.projets.cimencam.client.company.ScheduleTest" />
+      <option name="METHOD_NAME" value="delivery" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="TEST_SEARCH_SCOPE">
@@ -271,11 +290,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.OtherMenu.editingInvoicesTestByNumber1" />
-        <item itemvalue="JUnit.OtherMenu.aeNotChargedWithSendButton" />
-        <item itemvalue="JUnit.OtherMenu.showAccountValue" />
-        <item itemvalue="JUnit.OtherMenu.bankStatementWithSendBtn" />
-        <item itemvalue="JUnit.OrderListTestFeature.testValidateOrderFromOrderMenuInsufficientAccountWithCancelBtn" />
+        <item itemvalue="JUnit.ScheduleTest.delivery" />
+        <item itemvalue="JUnit.DefaultTest.defaultTest" />
+        <item itemvalue="JUnit.DefaultTest.test" />
+        <item itemvalue="JUnit.LoginFeatureTest" />
+        <item itemvalue="JUnit.OtherMenuTest.editingInvoicesTestByNumber1" />
       </list>
     </recent_temporary>
   </component>

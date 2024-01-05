@@ -8,14 +8,13 @@ import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.log4testng.Logger;
 
 /**
  * Created by KEPYA Christian on 28.11.23.
  * Uses JUnit test framework
  * Class for testing login feature (client and admin login)
  */
-public class LoginTestFeature {
+public class LoginFeatureTest {
     @Rule
     public ScreenShotOnFailRule screenShotOnFailRule = new ScreenShotOnFailRule();
 

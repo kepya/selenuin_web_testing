@@ -29,9 +29,9 @@ public class ScheduleTest {
 
     @After
     public void afterTest() {
-//        WebDriverFactory.takeScreenShot();
-//        TimeUtils.waitForSeconds(2);
-//        WebDriverFactory.finishBrowser();
+        WebDriverFactory.takeScreenShot();
+        TimeUtils.waitForSeconds(2);
+        WebDriverFactory.finishBrowser();
     }
 
     @Test

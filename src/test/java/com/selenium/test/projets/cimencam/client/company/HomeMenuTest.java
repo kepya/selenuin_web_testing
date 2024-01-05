@@ -12,11 +12,10 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
-import java.util.concurrent.ThreadLocalRandom;
 
 import static org.junit.Assert.fail;
 
-public class HomeMenu {
+public class HomeMenuTest {
     @Rule
     public ScreenShotOnFailRule screenShotOnFailRule = new ScreenShotOnFailRule();
 
@@ -27,9 +26,9 @@ public class HomeMenu {
 
     @After
     public void afterTest() {
-//        WebDriverFactory.takeScreenShot();
-//        TimeUtils.waitForSeconds(2);
-//        WebDriverFactory.finishBrowser();
+        WebDriverFactory.takeScreenShot();
+        TimeUtils.waitForSeconds(2);
+        WebDriverFactory.finishBrowser();
     }
 
     @Test
